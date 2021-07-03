@@ -1,0 +1,24 @@
+{
+  "name": "fullstack_pern_graphql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "nodemon dist/index.js",
+    "start2": "ts-node src/index.ts",
+    "dev2": "nodemon --exec src/index.ts",
+    "watch": "tsc -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^15.14.0",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "nodemon": "^2.0.9"
+  }
+}
