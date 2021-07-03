@@ -19,6 +19,11 @@
     "typescript": "^4.3.5"
   },
   "dependencies": {
-    "nodemon": "^2.0.9"
+    "@mikro-orm/cli": "^4.5.7",
+    "@mikro-orm/core": "^4.5.7",
+    "@mikro-orm/migrations": "^4.5.7",
+    "@mikro-orm/postgresql": "^4.5.7",
+    "nodemon": "^2.0.9",
+    "pg": "^8.6.0"
   }
 }
