@@ -3,16 +3,6 @@ import { __prod__ } from './constants'
 import { Post } from './entities/Post'
 import { microConfig } from './mikro-orm.config'
 
-// const constants = {
-//   entities: [Post],
-//   dbName: 'lireddit',
-//   host: 'database-1.cfuhjvgitkg3.ap-south-1.rds.amazonaws.com',
-//   user: 'postgres',
-//   password: 'settlin987',
-//   debug: !__prod__,
-//   type: 'postgresql',
-// } as const
-// constants.type
 const main = async () => {
   const orm = await MikroORM.init(microConfig)
 
