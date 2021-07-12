@@ -1,20 +1,21 @@
 import { MikroORM } from '@mikro-orm/core'
 import { __prod__ } from './constants'
-import { Post } from './entities/Post'
+// import { Post } from './entities/Post'
 import microConfig from './mikro-orm.config'
+import express from 'express'
 
 const main = async () => {
   const orm = await MikroORM.init(microConfig)
   orm.getMigrator().up()
 
-  //  just creates the instance just similar to the one if we had done using a constructor so the next line is required
-  // const post = orm.em.create(Post, { title: 'my first post ' })
-  // await orm.em.persistAndFlush(post)
-  const posts = await orm.em.find(Post, {})
-  console.log(posts)
+  const app = express()
 
-  // console.log('------------ sql2')
-  // await orm.em.nativeInsert(Post, { title: 'my first p[ost 2' })
+  app.get('/', (_, res) => {
+    res.send('working')
+  })
+  app.listen(4000, () => {
+    console.log('server started at port 4000')
+  })
 }
 
 main().catch((err) => {
