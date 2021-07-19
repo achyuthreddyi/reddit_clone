@@ -7,9 +7,3 @@ export class HelloResolver {
     return 'hello world'
   }
 }
-export class HelloResolver1 {
-  @Query(() => String)
-  hello1() {
-    return 'hello world'
-  }
-}
